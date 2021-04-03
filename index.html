@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Article preview component</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css" />
+
+</head>
+<body>
+
+  <article>
+    <header>
+      <img src="./images/drawers.jpg" alt="drawers" />
+    </header>
+
+    <section>
+      <div class="text">
+        <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+
+        <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+      </div>
+
+      <footer id="footer">
+        <div class="author">
+          <img class="avatar" src="./images/avatar-michelle.jpg" alt="Michelle" />
+          <p class="name">Michelle Appleton</p>
+          <p class="date">28 Jun 2020</p>
+        </div>
+
+        <div class="share">
+            <span>Share</span>
+            <a href="https://www.facebook.com">
+              <img src="./images/icon-facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com">
+              <img src="./images/icon-twitter.svg" alt="Twitter" />
+            </a>
+            <a href="https://www.pinterest.com">
+              <img src="./images/icon-pinterest.svg" alt="Pinterest" />
+            </a>
+        </div>
+
+        <div class="activate" onclick="onClick()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+            <path d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
+          </svg>
+        </div>
+      </footer>
+    </section>
+  </article>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://joeyimlay.dev">Joey Imlay</a>.
+  </div> -->
+  <script src="script.js"></script>
+</body>
+</html>

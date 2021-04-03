@@ -1,0 +1,310 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #ecf2f8;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+article {
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #48556a;
+  width: 326px;
+  -webkit-box-shadow: 0 1rem 2rem #c5cfdb;
+          box-shadow: 0 1rem 2rem #c5cfdb;
+}
+
+@media (min-width: 768px) {
+  article {
+    display: -ms-grid;
+    display: grid;
+    width: 732px;
+    -ms-grid-columns: 19rem 1fr;
+        grid-template-columns: 19rem 1fr;
+  }
+}
+
+article header img {
+  place-self: center;
+  height: 100%;
+  max-height: 14rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  article header img {
+    max-height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+  }
+}
+
+article div.text {
+  padding: 2rem 2rem 1rem;
+}
+
+article div.text h1 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  article div.text h1 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+}
+
+article div.text p {
+  color: #6d7f97;
+  line-height: 1.5rem;
+  font-size: 13.25px;
+}
+
+article footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+  height: 72px;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  /* STATE CHANGE */
+}
+
+@media (min-width: 768px) {
+  article footer {
+    padding-bottom: 2rem;
+  }
+}
+
+article footer div.activate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  place-self: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #ecf2f8;
+}
+
+article footer div.activate svg {
+  height: 0.75rem;
+  fill: #48556a;
+}
+
+article footer div.author {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content max-content;
+      grid-template-columns: -webkit-max-content -webkit-max-content;
+      grid-template-columns: max-content max-content;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  height: 2.5rem;
+  width: 100%;
+}
+
+article footer div.author img.avatar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+article footer div.author p {
+  margin-left: 1rem;
+  line-height: 1rem;
+}
+
+article footer div.author p.name {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  font-weight: 700;
+  color: #48556a;
+}
+
+article footer div.author p.date {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  color: #6d7f97;
+}
+
+article footer div.share {
+  display: none;
+}
+
+article footer.active {
+  background-color: #48556a;
+}
+
+@media (min-width: 768px) {
+  article footer.active {
+    background-color: white;
+  }
+}
+
+article footer.active div.activate {
+  background-color: #9eafc2;
+}
+
+article footer.active div.activate svg {
+  fill: white;
+}
+
+article footer.active div.author {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  article footer.active div.author {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+article footer.active div.share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  height: 100%;
+  background-color: #48556a;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+article footer.active div.share span {
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #9eafc2;
+  margin-right: 1rem;
+}
+
+article footer.active div.share a {
+  margin-right: 1rem;
+}
+
+article footer.active div.share a:last-of-type {
+  margin-right: 0;
+}
+
+article footer.active div.share a img {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  article footer.active div.share {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transform: translate(60px, -4rem);
+            transform: translate(60px, -4rem);
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    -webkit-box-shadow: 0 0.5rem 1rem #c5cfdb;
+            box-shadow: 0 0.5rem 1rem #c5cfdb;
+  }
+  article footer.active div.share:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 15px 0;
+    border-color: #48556a transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -15px;
+    left: 110px;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #48556a;
+}
+/*# sourceMappingURL=index.css.map */
